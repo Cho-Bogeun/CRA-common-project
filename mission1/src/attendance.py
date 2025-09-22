@@ -1,60 +1,89 @@
+from enum import Enum
 from pathlib import Path
+
+POINT_FOR_SILVER_GRADE = 30
+
+POINT_FOR_GOLD_GRADE = 50
+
+ATTEND_COUNT_FOR_BONUS = 9
+
+BONUS_POINT = 10
 
 FILE = "attendance_weekday_500.txt"
 
 FILE_ABS_PATH = (Path(__file__).parent / FILE).resolve()
 
-id1 = {}
+name2user_id = {}
 id_cnt = 0
 
-# dat[사용자ID][요일]
-dat = [[0] * 100 for _ in range(100)]
+cnt_attend = [[0] * 100 for _ in range(100)]
 points = [0] * 100
-grade = [0] * 100
-names = [''] * 100
-wed = [0] * 100
-weeken = [0] * 100
 
-def input2(w, wk):
+names = [''] * 100
+cnt_wednesday_attend = [0] * 100
+cnt_weekend_attend = [0] * 100
+
+class AttendDay(Enum):
+    monday = 0
+    tuesday = 1
+    wednesday = 2
+    thursday = 3
+    friday = 4
+    saturday = 5
+    sunday = 6
+
+NORMAL_DAY_NAME_LIST = [d.name for d in (
+    AttendDay.monday, AttendDay.tuesday, AttendDay.thursday, AttendDay.friday
+)]
+WEDNES_DAY_NAME_LIST = [AttendDay.wednesday.name]
+WEEKEND_DAY_NAME_LIST = [d.name for d in (AttendDay.saturday, AttendDay.sunday)]
+WEEKEND_DAY_INDEX_LIST: list[int] = [d.value for d in (AttendDay.saturday, AttendDay.sunday)]
+
+def get_attend_index(attend_day: str) -> int:
+    _day_index = -1
+    for day in AttendDay:
+        if day.name == attend_day:
+            _day_index = day.value
+            return _day_index
+
+    assert _day_index != -1
+    return _day_index
+
+def get_attend_point(attend_day: str) -> int:
+    if attend_day in NORMAL_DAY_NAME_LIST:
+        return 1
+    elif attend_day in WEEKEND_DAY_NAME_LIST:
+        return 2
+    else:
+        return 3
+
+def record_attendance(name, attend_day):
     global id_cnt
 
-    if w not in id1:
+    if name not in name2user_id:
         id_cnt += 1
-        id1[w] = id_cnt
-        names[id_cnt] = w
+        name2user_id[name] = id_cnt
+        names[id_cnt] = name
 
-    id2 = id1[w]
+    user_id = name2user_id[name]
 
-    add_point = 0
-    index = 0
+    attend_point = get_attend_point(attend_day)
+    day_index = get_attend_index(attend_day)
 
-    if wk == "monday":
-        index = 0
-        add_point += 1
-    elif wk == "tuesday":
-        index = 1
-        add_point += 1
-    elif wk == "wednesday":
-        index = 2
-        add_point += 3
-        wed[id2] += 1
-    elif wk == "thursday":
-        index = 3
-        add_point += 1
-    elif wk == "friday":
-        index = 4
-        add_point += 1
-    elif wk == "saturday":
-        index = 5
-        add_point += 2
-        weeken[id2] += 1
-    elif wk == "sunday":
-        index = 6
-        add_point += 2
-        weeken[id2] += 1
+    if attend_day in WEDNES_DAY_NAME_LIST:
+        cnt_wednesday_attend[user_id] += 1
+    elif attend_day in WEEKEND_DAY_NAME_LIST:
+        cnt_weekend_attend[user_id] += 1
 
-    dat[id2][index] += 1
-    points[id2] += add_point
+    cnt_attend[user_id][day_index] += 1
+    points[user_id] += attend_point
+
+class Grade(Enum):
+    GOLD = 50
+    SILVER = 30
+    NORMAL = 0
+
+grade = [Grade.NORMAL] * 100
 
 def input_file():
     try:
@@ -65,33 +94,28 @@ def input_file():
                     break
                 parts = line.strip().split()
                 if len(parts) == 2:
-                    input2(parts[0], parts[1])
+                    record_attendance(parts[0], parts[1])
 
         for i in range(1, id_cnt + 1):
-            if dat[i][2] > 9:
-                points[i] += 10
-            if dat[i][5] + dat[i][6] > 9:
-                points[i] += 10
+            if cnt_attend[i][AttendDay.wednesday.value] > ATTEND_COUNT_FOR_BONUS:
+                points[i] += BONUS_POINT
+            if sum([cnt_attend[i][we_ix] for we_ix in WEEKEND_DAY_INDEX_LIST]) > ATTEND_COUNT_FOR_BONUS:
+                points[i] += BONUS_POINT
 
-            if points[i] >= 50:
-                grade[i] = 1
-            elif points[i] >= 30:
-                grade[i] = 2
+            if points[i] >= Grade.GOLD.value:
+                grade[i] = Grade.GOLD
+            elif points[i] >= Grade.SILVER.value:
+                grade[i] = Grade.SILVER
             else:
-                grade[i] = 0
+                grade[i] = Grade.NORMAL
 
             print(f"NAME : {names[i]}, POINT : {points[i]}, GRADE : ", end="")
-            if grade[i] == 1:
-                print("GOLD")
-            elif grade[i] == 2:
-                print("SILVER")
-            else:
-                print("NORMAL")
+            print(grade[i].name)
 
         print("\nRemoved player")
         print("==============")
         for i in range(1, id_cnt + 1):
-            if grade[i] not in (1, 2) and wed[i] == 0 and weeken[i] == 0:
+            if grade[i] not in (Grade.GOLD, Grade.SILVER) and cnt_wednesday_attend[i] == 0 and cnt_weekend_attend[i] == 0:
                 print(names[i])
 
     except FileNotFoundError:
