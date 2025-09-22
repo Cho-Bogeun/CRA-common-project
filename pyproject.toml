@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cra-common-project"
+version = "0.1.0"
+description = ""
+authors = ["yena.gwak <yena.gwak@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.4.2"
+pytest-cov = "^7.0.0"
+pytest-mock = "^3.15.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
