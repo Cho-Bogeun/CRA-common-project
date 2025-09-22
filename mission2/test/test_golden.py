@@ -1,8 +1,15 @@
 import pytest
 
 from mission2.src.main import run
+from mission2.src.user import User
 
-def test_golden(capsys):
+
+@pytest.fixture()
+def cleanup_class_variable():
+    yield
+    User.clear()
+
+def test_golden(capsys, cleanup_class_variable):
     #Arrange, Act
     run()
     result = capsys.readouterr()
