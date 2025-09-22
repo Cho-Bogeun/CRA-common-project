@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba33ad80-ea6e-4f73-a700-103c534969e4" name="변경" comment="[green] mission 2">
-      <change afterPath="$PROJECT_DIR$/mission2/src/attendance_weekday_500.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mission2/src/strategies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mission2/src/type.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mission2/src/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mission2/test/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mission2/test/test_user.py" afterDir="false" />
+    <list default="true" id="ba33ad80-ea6e-4f73-a700-103c534969e4" name="변경" comment="필요없는 conftest 제거">
+      <change afterPath="$PROJECT_DIR$/coverage_total.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage_user_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage_user_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverate_strategies.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mission2/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/mission2/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mission2/test/test_golden.py" beforeDir="false" afterPath="$PROJECT_DIR$/mission2/test/test_golden.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +43,9 @@
   "associatedIndex": 4
 }]]></component>
   <component name="ProjectId" id="3325otrxSayremcGBGRbw8ufeen" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -218,7 +218,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758502504372</updated>
-      <workItem from="1758502505486" duration="16371000" />
+      <workItem from="1758502505486" duration="17551000" />
     </task>
     <task id="LOCAL-00001" summary="셋업">
       <option name="closed" value="true" />
@@ -268,7 +268,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758512152883</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mission 2 완성">
+      <option name="closed" value="true" />
+      <created>1758521537126</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758521537126</updated>
+    </task>
+    <task id="LOCAL-00008" summary="필요없는 conftest 제거">
+      <option name="closed" value="true" />
+      <created>1758521805436</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758521805436</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +308,9 @@
     <MESSAGE value="mission 1 WIP~" />
     <MESSAGE value="mission 1" />
     <MESSAGE value="[green] mission 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="[green] mission 2" />
+    <MESSAGE value="mission 2 완성" />
+    <MESSAGE value="필요없는 conftest 제거" />
+    <option name="LAST_COMMIT_MESSAGE" value="필요없는 conftest 제거" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -307,6 +325,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CRA_common_project$attendance.coverage" NAME="attendance 커버리지 결과" MODIFIED="1758516136151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mission1/src" />
-    <SUITE FILE_PATH="coverage/CRA_common_project$.coverage" NAME=" 커버리지 결과" MODIFIED="1758521353546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mission2/test" />
+    <SUITE FILE_PATH="coverage/CRA_common_project$.coverage" NAME=" 커버리지 결과" MODIFIED="1758521501239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mission2/test" />
   </component>
 </project>
