@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba33ad80-ea6e-4f73-a700-103c534969e4" name="변경" comment="[TDD] Golden test">
+    <list default="true" id="ba33ad80-ea6e-4f73-a700-103c534969e4" name="변경" comment="mission 1 WIP~">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mission1/src/attendance.py" beforeDir="false" afterPath="$PROJECT_DIR$/mission1/src/attendance.py" afterDir="false" />
     </list>
@@ -149,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758502504372</updated>
-      <workItem from="1758502505486" duration="4934000" />
+      <workItem from="1758502505486" duration="6479000" />
     </task>
     <task id="LOCAL-00001" summary="셋업">
       <option name="closed" value="true" />
@@ -175,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758504107691</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mission 1 WIP~">
+      <option name="closed" value="true" />
+      <created>1758507546420</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758507546420</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,10 +204,11 @@
     <MESSAGE value="셋업" />
     <MESSAGE value="셋업 - poetry" />
     <MESSAGE value="[TDD] Golden test" />
-    <option name="LAST_COMMIT_MESSAGE" value="[TDD] Golden test" />
+    <MESSAGE value="mission 1 WIP~" />
+    <option name="LAST_COMMIT_MESSAGE" value="mission 1 WIP~" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CRA_common_project$attendance.coverage" NAME="attendance 커버리지 결과" MODIFIED="1758503478589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mission1/src" />
-    <SUITE FILE_PATH="coverage/CRA_common_project$.coverage" NAME=" 커버리지 결과" MODIFIED="1758507376926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CRA_common_project$.coverage" NAME=" 커버리지 결과" MODIFIED="1758511402271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
