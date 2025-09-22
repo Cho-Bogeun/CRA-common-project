@@ -28,8 +28,7 @@ D4 - 리팩토링에 디자인 패턴을 적용한다.
 D5 - 리팩토링이 끝난 코드에, 코드 커버리지가 100% 되어야 한다.
 ![img.png](coverage_total.png)
 
-92%, 96%는 도달하면 안되는 영역
-![img.png](coverate_strategies.png)
-[stragegies.py](./mission2/src/strategies.py) 45번째 줄은 현재 사용하지 않는게 맞으나 미리 구현함
+92%, 98%는 도달하면 안되는 영역
+![img.png](coverage_strategies.png)
 ![img.png](coverage_user_1.png)
 ![img.png](coverage_user_2.png)
