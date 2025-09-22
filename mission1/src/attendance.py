@@ -1,3 +1,9 @@
+from pathlib import Path
+
+FILE = "attendance_weekday_500.txt"
+
+FILE_ABS_PATH = (Path(__file__).parent / FILE).resolve()
+
 id1 = {}
 id_cnt = 0
 
@@ -52,7 +58,7 @@ def input2(w, wk):
 
 def input_file():
     try:
-        with open("attendance_weekday_500.txt", encoding='utf-8') as f:
+        with open(FILE_ABS_PATH, encoding='utf-8') as f:
             for _ in range(500):
                 line = f.readline()
                 if not line:
