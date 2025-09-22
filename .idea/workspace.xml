@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba33ad80-ea6e-4f73-a700-103c534969e4" name="변경" comment="필요없는 conftest 제거">
-      <change afterPath="$PROJECT_DIR$/coverage_total.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage_user_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage_user_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverate_strategies.png" afterDir="false" />
+    <list default="true" id="ba33ad80-ea6e-4f73-a700-103c534969e4" name="변경" comment="ReadME 업데이트">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mission1/src/attendance.py" beforeDir="false" afterPath="$PROJECT_DIR$/mission1/src/attendance.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +108,23 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Python 테스트.test 내 Python 테스트">
+  <component name="RunManager" selected="Python 테스트.mission1.test.test_golden.test_golden의 Python 테스트">
+    <configuration name="mission1.test.test_golden.test_golden의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="CRA-common-project" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;mission1.test.test_golden.test_golden&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="test 내 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="CRA-common-project" />
       <option name="ENV_FILES" value="" />
@@ -177,29 +189,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test_user.test_user_id의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="CRA-common-project" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mission2/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_user.test_user_id&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python 테스트.mission1.test.test_golden.test_golden의 Python 테스트" />
         <item itemvalue="Python 테스트.test 내 Python 테스트" />
         <item itemvalue="Python 테스트.test_user.TestUser.test_user_attend_day_counter의 Python 테스트" />
         <item itemvalue="Python 테스트.test_golden.test_golden의 Python 테스트" />
         <item itemvalue="Python 테스트.test_user.TestOscar.test_grade_evaluation의 Python 테스트" />
-        <item itemvalue="Python 테스트.test_user.test_user_id의 Python 테스트" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +214,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1758502504372</updated>
-      <workItem from="1758502505486" duration="17551000" />
+      <workItem from="1758502505486" duration="17717000" />
     </task>
     <task id="LOCAL-00001" summary="셋업">
       <option name="closed" value="true" />
@@ -284,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758521805436</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ReadME 업데이트">
+      <option name="closed" value="true" />
+      <created>1758522715361</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1758522715361</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +314,8 @@
     <MESSAGE value="[green] mission 2" />
     <MESSAGE value="mission 2 완성" />
     <MESSAGE value="필요없는 conftest 제거" />
-    <option name="LAST_COMMIT_MESSAGE" value="필요없는 conftest 제거" />
+    <MESSAGE value="ReadME 업데이트" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReadME 업데이트" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

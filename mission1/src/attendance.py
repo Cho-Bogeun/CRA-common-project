@@ -61,9 +61,9 @@ def record_attendance(name, attend_day):
     global ID_CNT
 
     if name not in NAME2USER_ID:
+        ID_CNT += 1
         NAME2USER_ID[name] = ID_CNT
         NAMES[ID_CNT] = name
-        ID_CNT += 1
 
     user_id = NAME2USER_ID[name]
 
@@ -106,13 +106,13 @@ def input_file():
 
 
 def print_removed_players():
-    for i in range(ID_CNT):
+    for i in range(1, 1+ID_CNT):
         if GRADE[i] not in (Grade.GOLD, Grade.SILVER) and CNT_WEDNESDAY_ATTEND[i] == 0 and CNT_WEEKEND_ATTEND[i] == 0:
             print(NAMES[i])
 
 
 def update_point_and_grade():
-    for i in range(ID_CNT):
+    for i in range(1, 1+ID_CNT):
         if CNT_ATTEND[i][AttendDay.wednesday.value] > ATTEND_COUNT_FOR_BONUS:
             POINTS[i] += BONUS_POINT
         if sum([CNT_ATTEND[i][we_ix] for we_ix in WEEKEND_DAY_INDEX_LIST]) > ATTEND_COUNT_FOR_BONUS:
